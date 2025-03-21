@@ -15,7 +15,7 @@ This project is a technical test for developing a single-page application (SPA) 
 ## **Installation & Setup**  
 1. Clone the repository:  
    ```sh
-   git clone https://github.com/jutorla/devTest
+   git clone https://github.com/jutorla/devTest.git
    cd devTest
    ```  
 2. Install dependencies:  
@@ -42,7 +42,9 @@ This project is a technical test for developing a single-page application (SPA) 
 ```
 /src  
  ├── components/      # UI components  
- ├── pages/           # Application views  
+ ├── pages/           # Application views
+ ├── constants/       # Constants utils
+ ├── utils/           # Api call logic 
  ├── routes/          # Routing configuration  
  ├── App.jsx          # Main component  
  ├── main.jsx         # Entry point  
