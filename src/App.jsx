@@ -7,11 +7,11 @@ import Header from "./components/Header";
 export default function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-100">
+      <div className="">
       <Header />
         <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/:id" element={<ProductDetails />} />
         </Routes>
       </div>
     </Router>
