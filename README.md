@@ -24,7 +24,7 @@ This project is a technical test for developing a single-page application (SPA) 
    ```  
 3. Start development server:  
    ```sh
-   npm start
+   npm run start
    ```  
 4. Build:  
    ```sh
@@ -32,7 +32,7 @@ This project is a technical test for developing a single-page application (SPA) 
    ```  
 5. Run tests:  
    ```sh
-   npm test
+   npm run test
    ```  
 6. Lint code:  
    ```sh
