@@ -51,3 +51,9 @@ This project is a technical test for developing a single-page application (SPA) 
  ├── __tests__/       # Unit tests  
  ├── README.md        # Documentation  
 ```
+## **LeftOvers**  
+Some colors from the api response can not be mapped due to unknow color codes.
+Typo on attribute from api/product/:id "secondaryCmera": "2 MP".
+Missing api error handling.
+Unitary test for each component.
+Style looks clunky.

@@ -8,10 +8,8 @@ export default function App() {
   return (
     <Router>
       <div className="">
-      <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/:id" element={<ProductDetails />} />
         </Routes>
       </div>
     </Router>

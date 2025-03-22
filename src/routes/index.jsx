@@ -9,7 +9,6 @@ export default function AppRoutes() {
     <BrowserRouter>
       <Routes>
         <Route path="/home" element={<Home />} />
-        <Route path="/product/:id" element={<ProductDetails />} />
       </Routes>
     </BrowserRouter>
   );
