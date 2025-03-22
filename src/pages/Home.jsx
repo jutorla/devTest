@@ -17,21 +17,19 @@ export default function Home() {
     const fetchProducts = async () => {
       try {
         const cachedData = localStorage.getItem(CACHE_KEY);
-        console.log(cachedData);
         if (cachedData) {
           const { data, timestamp } = JSON.parse(cachedData);
           if (Date.now() - timestamp < CACHE_EXPIRATION) {
             setProducts(data);
             setFilteredProducts(data);
             setLoading(false);
+            return;
           }
         }
-        else {
         const result = await getProducts();
         setProducts(result);
         setFilteredProducts(result);
         localStorage.setItem(CACHE_KEY, JSON.stringify({ data: result, timestamp: Date.now() }));
-      }
       } catch (error) {
         console.error("Error fetching products:", error);
       } finally {
@@ -50,7 +48,7 @@ export default function Home() {
     );
     setFilteredProducts(filtered);
     setCurrentPage(1);
-  }, [search, products]);
+  }, [search, products, loading]);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -77,7 +75,7 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-4 gap-4">
           {currentProducts.map((product) => (
-              <ProductSnap product={product} />
+              <ProductSnap key={product.id} product={product} />
           ))}
         </div>
         <div className="flex justify-center mt-4">

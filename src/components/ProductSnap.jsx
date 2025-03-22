@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ProductSnap = ( {product} ) => {
+const ProductSnap = ({ product }) => {
   return (
     <Link to={`/${product.id}`} className="block">
       <div className="p-2 w-70 h-80 transition flex flex-col items-center justify-center">
