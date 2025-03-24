@@ -23,7 +23,7 @@ const Pagination = ({ productsPerPage, totalProducts, paginate, currentPage }) =
           <li key={number}>
             <button
               onClick={() => paginate(number)}
-              className={`px-2 py-1 md:px-4 md:py-2 hover:bg-blue-200 rounded ${currentPage === number ? 'bg-blue-500 text-white' : 'bg-gray-300'}`}
+              className={`px-2 py-1 md:px-4 md:py-2 hover:bg-blue-200 mb-2 rounded ${currentPage === number ? 'bg-blue-500 text-white' : 'bg-gray-300'}`}
             >
               {number}
             </button>
